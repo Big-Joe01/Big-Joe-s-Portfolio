@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJ Clothing Brand - Fashion Redefined</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #e74c3c;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e74c3c;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Brochures Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .brochures {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .brochure-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .brochure-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .brochure-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .brochure-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .brochure-card:hover .brochure-img img {
+            transform: scale(1.1);
+        }
+        
+        .brochure-info {
+            padding: 20px;
+        }
+        
+        .brochure-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        .brochure-info p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        /* Flyers Section */
+        .flyers {
+            background-color: #f1f1f1;
+        }
+        
+        .flyer-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .flyer-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .flyer-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .flyer-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .flyer-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .flyer-item:hover .flyer-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #e74c3c;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #bbb;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: #e74c3c;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            background-color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #e74c3c;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content p {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">BJ <span>Clothing</span> Brand</a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#brochures">Brochures</a></li>
+                    <li><a href="#flyers">Flyers</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Redefining Fashion with BJ Clothing</h1>
+                <p>Discover our latest collections and premium quality clothing that combines style with comfort</p>
+                <a href="#brochures" class="btn">View Collections</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Brochures Section -->
+    <section id="brochures" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Brochures</h2>
+                <p>Explore our seasonal collections through our beautifully designed brochures</p>
+            </div>
+            
+            <div class="brochures">
+                <!-- Brochure 1 -->
+                <div class="brochure-card">
+                    <div class="brochure-img">
+                        <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Summer Collection">
+                    </div>
+                    <div class="brochure-info">
+                        <h3>Summer 2023 Collection</h3>
+                        <p>Lightweight fabrics and vibrant colors for the sunny season</p>
+                        <a href="#" class="btn">Download</a>
+                    </div>
+                </div>
+                
+                <!-- Brochure 2 -->
+                <div class="brochure-card">
+                    <div class="brochure-img">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Winter Collection">
+                    </div>
+                    <div class="brochure-info">
+                        <h3>Winter 2023 Collection</h3>
+                        <p>Warm and stylish outfits for the cold months</p>
+                        <a href="#" class="btn">Download</a>
+                    </div>
+                </div>
+                
+                <!-- Brochure 3 -->
+                <div class="brochure-card">
+                    <div class="brochure-img">
+                        <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Formal Wear">
+                    </div>
+                    <div class="brochure-info">
+                        <h3>Formal Wear Collection</h3>
+                        <p>Elegant outfits for business and special occasions</p>
+                        <a href="#" class="btn">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Flyers Section -->
+    <section id="flyers" class="section flyers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Promotional Flyers</h2>
+                <p>Check out our latest promotional materials and special offers</p>
+            </div>
+            
+            <div class="flyer-gallery">
+                <!-- Flyer 1 -->
+                <div class="flyer-item">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Summer Sale">
+                    <div class="flyer-overlay">
+                        <h3>Summer Sale</h3>
+                        <p>Up to 50% off selected items</p>
+                    </div>
+                </div>
+                
+                <!-- Flyer 2 -->
+                <div class="flyer-item">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="New Arrivals">
+                    <div class="flyer-overlay">
+                        <h3>New Arrivals</h3>
+                        <p>Fresh styles for the season</p>
+                    </div>
+                </div>
+                
+                <!-- Flyer 3 -->
+                <div class="flyer-item">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Members Club">
+                    <div class="flyer-overlay">
+                        <h3>Members Club</h3>
+                        <p>Exclusive benefits for our members</p>
+                    </div>
+                </div>
+                
+                <!-- Flyer 4 -->
+                <div class="flyer-item">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Limited Edition">
+                    <div class="flyer-overlay">
+                        <h3>Limited Edition</h3>
+                        <p>Unique pieces for fashion lovers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About BJ Clothing Brand</h2>
+                <p>Our story and what makes us different</p>
+            </div>
+            
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>Founded in 2015, BJ Clothing Brand has been at the forefront of contemporary fashion, blending timeless elegance with modern trends. We believe in creating clothing that not only looks good but feels good to wear.</p>
+                <p>Our commitment to quality materials, ethical production, and innovative designs has earned us a loyal following among fashion-conscious individuals who appreciate attention to detail and exceptional craftsmanship.</p>
+                <p>Each collection is thoughtfully curated to reflect the latest trends while maintaining the distinctive BJ aesthetic that our customers love.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BJ Clothing Brand</h3>
+                    <p>Redefining fashion with quality and style since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#brochures">Brochures</a>
+                    <a href="#flyers">Flyers</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>123 Fashion Avenue</p>
+                    <p>New York, NY 10001</p>
+                    <p>Email: info@bjclothing.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new collections and exclusive offers.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin-bottom: 10px; border: none; border-radius: 4px;">
+                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 BJ Clothing Brand. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

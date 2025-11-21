@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
     <title>Bebatso Joshua (Big Joe) | Fullstack Developer & Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="./porrfolio.css">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: transparent;
+        }
+
+        .content-overlay {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(45deg, rgba(29, 185, 84, 0.3), rgba(255, 255, 255, 0.1));
+            margin-bottom: 40px;
+            backdrop-filter: blur(5px);
+        }
+
+    </style>
 </head>
+
 <body>
     <!-- Header/Navbar -->
     <header>
-        <div class="container">3 
+        <div class="container">3
             <div class="logo">
                 <a href="#"><span>BIG</span>JOE</a>
             </div>
@@ -42,11 +89,11 @@
                 <p>Building digital experiences that matter with code, creativity, and efficiency.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn primary">Hire Me</a>
-                    <a href="assets/resume.pdf" download class="btn secondary">Download CV</a>
+                    <a href="bebatso terungwa joshua Resume.pdf" download class="btn secondary">Download CV</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/profile.jpg" alt="Bebatso Joshua (Big Joe)">
+                <img src="./aaaaa (44).jpg" alt="Bebatso Joshua (Big Joe)">
             </div>
         </div>
     </section>
@@ -57,14 +104,18 @@
             <h2 class="section-title">About <span>Me</span></h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="images/profile2.jpg" alt="Bebatso Joshua">
+                    <img src="./aaaaa (2).png" alt="Bebatso Joshua">
                 </div>
                 <div class="about-text">
                     <h3>Hello, I'm Bebatso Joshua (Big Joe)</h3>
-                    <p>I'm a passionate Fullstack Developer and Graphics Designer with expertise in creating visually appealing and functional digital solutions. With a keen eye for design and a strong technical background, I bring ideas to life through code and creativity.</p>
-                    
-                    <p>Beyond development and design, I'm highly proficient in Microsoft Office applications with a typing speed of 70 WPM, enabling me to handle documentation and administrative tasks with exceptional efficiency.</p>
-                    
+                    <p>I'm a passionate Fullstack Developer and Graphics Designer with expertise in creating visually
+                        appealing and functional digital solutions. With a keen eye for design and a strong technical
+                        background, I bring ideas to life through code and creativity.</p>
+
+                    <p>Beyond development and design, I'm highly proficient in Microsoft Office applications with a
+                        typing speed of 70 WPM, enabling me to handle documentation and administrative tasks with
+                        exceptional efficiency.</p>
+
                     <div class="about-details">
                         <div class="detail-item">
                             <span>Name:</span>
@@ -83,7 +134,7 @@
                             <p>70 WPM</p>
                         </div>
                     </div>
-                    
+
                     <div class="social-links">
                         <a href="https://github.com/Big-Joe01"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -150,7 +201,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Design Skills -->
                 <div class="skills-category">
                     <h3><i class="fas fa-paint-brush"></i> Design</h3>
@@ -191,7 +242,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Office Skills -->
                 <div class="skills-category">
                     <h3><i class="fas fa-file-alt"></i> Office Productivity</h3>
@@ -249,47 +300,52 @@
             <div class="portfolio-grid">
                 <!-- Web Development Projects -->
                 <div class="portfolio-item web">
-                    <img src="images/projects/web1.jpg" alt="Web Project 1">
+                    <img src="/Other sites/MeatMe/meatMe_Logo.jpg" alt="Web Project 1">
                     <div class="portfolio-overlay">
                         <h3>E-commerce Meat delivery Website</h3>
                         <p>Fullstack development with HTML, CSS & JavaScript</p>
-                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/meatme-website/index.html" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="/Other sites/MeatMe/meatMe.html" class="portfolio-link"><i
+                                class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item web">
-                    <img src="images/projects/web2.jpg" alt="Web Project 2">
+                    <img src="/Other sites/NovaSite/images/novaSite (39).jpg" alt="Web Project 2">
                     <div class="portfolio-overlay">
                         <h3>Web Building and Management</h3>
                         <p>I build and manage websites just like this</p>
-                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/Nova%20Site/index.html" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="/Other sites/NovaSite/novaSite.html" class="portfolio-link"><i
+                                class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                
+
                 <!-- Graphic Design Projects -->
                 <div class="portfolio-item design">
-                    <img src="images/projects/design1.jpg" alt="Design Project 1">
+                    <img src="/Other sites/JoeGraph/images/joeGraph (17).jpg" alt="Design Project 1">
                     <div class="portfolio-overlay">
                         <h3>Brand Identity</h3>
                         <p>Website for a Graphics Company</p>
-                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/bigJoe'z%20graphicx/index.html" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="/Other sites/JoeGraph/joeGraph.html" class="portfolio-link"><i
+                                class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item design">
-                    <img src="images/projects/design2.jpg" alt="Design Project 2">
+                    <img src="/Other sites/JoeGraph/images/joeGraph (3).jpg" alt="Design Project 2">
                     <div class="portfolio-overlay">
                         <h3>Marketing Materials</h3>
                         <p>Brochures and flyers for a local business</p>
-                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/BJ_Clothing%20Brand/index.html" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="/Other sites/JoeGraph/bigSite.html" class="portfolio-link"><i
+                                class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                
+
                 <!-- Office Projects -->
                 <div class="portfolio-item office">
                     <img src="images/projects/office1.jpg" alt="Office Project 1">
                     <div class="portfolio-overlay">
                         <h3>Financial Report</h3>
                         <p>Advanced Excel spreadsheet with macros</p>
-                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/tech-learning-platform/index.html" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/tech-learning-platform/index.html"
+                            class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item office">
@@ -297,7 +353,8 @@
                     <div class="portfolio-overlay">
                         <h3>Business Proposal</h3>
                         <p>Professional Word document with advanced formatting</p>
-                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/Big%20Site/index.html" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="file:///C:/Users/Big-Joe/Desktop/Projects/Portfolio/oth%20pages/Big%20Site/index.html"
+                            class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -399,6 +456,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>

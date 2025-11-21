@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Tech Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tech Learning Platform - Admin</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">View Site</a></li>
+                    <li><a href="#" id="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="admin-dashboard">
+            <aside class="admin-sidebar">
+                <ul>
+                    <li><a href="#" class="active" data-section="dashboard">Dashboard</a></li>
+                    <li><a href="#" data-section="courses">Courses</a></li>
+                    <li><a href="#" data-section="students">Students</a></li>
+                    <li><a href="#" data-section="upload">Upload Content</a></li>
+                </ul>
+            </aside>
+
+            <div class="admin-content">
+                <div id="dashboard-section" class="admin-section">
+                    <h2>Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Courses</h3>
+                            <p id="total-courses">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Active Students</h3>
+                            <p id="total-students">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Video Lessons</h3>
+                            <p id="total-videos">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>PDF Resources</h3>
+                            <p id="total-pdfs">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="courses-section" class="admin-section" style="display: none;">
+                    <h2>Manage Courses</h2>
+                    <button id="add-course-btn" class="btn">Add New Course</button>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Lessons</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="courses-table">
+                            <!-- Courses will be loaded via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="students-section" class="admin-section" style="display: none;">
+                    <h2>Manage Students</h2>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Joined</th>
+                                <th>Courses</th>
+                            </tr>
+                        </thead>
+                        <tbody id="students-table">
+                            <!-- Students will be loaded via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="upload-section" class="admin-section" style="display: none;">
+                    <h2>Upload Content</h2>
+                    <form id="upload-form">
+                        <div class="form-group">
+                            <label for="content-type">Content Type</label>
+                            <select id="content-type">
+                                <option value="video">Video</option>
+                                <option value="pdf">PDF</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="course-select">Course</label>
+                            <select id="course-select">
+                                <!-- Courses will be loaded via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="content-title">Title</label>
+                            <input type="text" id="content-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="content-file">File</label>
+                            <input type="file" id="content-file" required>
+                        </div>
+                        <button type="submit" class="btn">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tech Learning Platform</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+meatme-website/
+├── index.html              # Main HTML file
+├── css/
+│   └── style.css           # Main styles
+├── js/
+│   ├── main.js             # Main JavaScript
+│   └── checkout.js         # Checkout functionality
+├── images/                 # All product images
+└── assets/                 # Other assets (icons, fonts)
